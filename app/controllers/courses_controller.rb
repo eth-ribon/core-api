@@ -10,7 +10,7 @@ class CoursesController < ApplicationController
 
   # GET /courses/1
   def show
-    render json: @course.as_json(include: :students)
+    render json: @course.as_json(include: [:students, :attendances])
   end
 
   # POST /courses
